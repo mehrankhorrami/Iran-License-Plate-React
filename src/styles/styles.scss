@@ -10,8 +10,10 @@
   background-color: rgba(#000, 4%);
   border-radius: 6px;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
 
-  .flag-wrapper {
+  .plate-flag-wrapper {
     width: 20px;
     height: 100%;
     display: flex;
@@ -35,5 +37,21 @@
         color: white;
       }
     }
+  }
+
+  .plate-main-section {
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .plate-separator {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(#000, 15%)
+  }
+
+  .plate-region-section {
+    width: 40px;
+    height: 100%;
   }
 }
