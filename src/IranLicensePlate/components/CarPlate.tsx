@@ -1,5 +1,6 @@
 import {HTMLAttributes} from "react";
 import flag from "../../assets/iran-flag.svg";
+import iranText from "../../assets/iran-text.svg";
 
 interface CarProps extends HTMLAttributes<HTMLDivElement> {
     value: string;
@@ -25,7 +26,9 @@ export const CarPlate = (
             </div>
             <div className="plate-main-section"></div>
             <div className="plate-separator"></div>
-            <div className="plate-region-section"></div>
+            <div className="plate-region-section">
+                <img src={iranText} alt="Iran"/>
+            </div>
         </div>
     );
 }
