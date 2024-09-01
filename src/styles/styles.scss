@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.car-plate-wrapper {
+  width: 218px;
+  height: 40px;
+  border: 1px solid rgba(#000, 15%);
+  background-color: rgba(#000, 4%);
+  border-radius: 6px;
+  overflow: hidden;
+
+  .flag-wrapper {
+    width: 20px;
+    height: 100%;
+    display: flex;
+    background-color: #002F9C;
+    padding: 4px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      max-width: 100%;
+    }
+
+    .iran-text {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      gap: 0;
+
+      span {
+        font-size: 6px;
+        color: white;
+      }
+    }
+  }
+}
