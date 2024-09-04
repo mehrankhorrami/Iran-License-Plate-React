@@ -1,11 +1,16 @@
 {
   "name": "iran-license-plate-react",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
   "files": ["dist"],
+  "homepage": "https://github.com/mehrankhorrami/Iran-License-Plate-React",
+  "repository": "https://github.com/mehrankhorrami/Iran-License-Plate-React",
+  "author": {
+    "name": "Mehran Khorrami",
+    "email": "mehran.khorrami@gmail.com",
+    "url": "https://github.com/mehrankhorrami"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
