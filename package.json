@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "files": ["dist"],
+  "description": "A general react component for Iran license plate.",
   "homepage": "https://github.com/mehrankhorrami/Iran-License-Plate-React",
   "repository": "https://github.com/mehrankhorrami/Iran-License-Plate-React",
   "author": {
