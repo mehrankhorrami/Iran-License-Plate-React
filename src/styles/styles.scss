@@ -1,17 +1,18 @@
-* {
-  box-sizing: border-box;
-}
 
+.plate-wrapper {
+  font-size: 16px;
+  direction: ltr;
 
-.car-plate-wrapper {
-  width: 218px;
-  height: 40px;
-  border: 1px solid rgba(#000, 15%);
-  background-color: rgba(#000, 4%);
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
+  input, select {
+    padding: 0 8px;
+    border: 1px solid rgba(#000, 15%);
+    background-color: white;
+    border-radius: 6px;
+    font-size: 0.87rem;
+    height: 100%;
+    text-align: center;
+    direction: rtl;
+  }
 
   .plate-flag-wrapper {
     width: 20px;
@@ -39,15 +40,49 @@
     }
   }
 
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.car-plate-wrapper {
+  width: 218px;
+  height: 40px;
+  border: 1px solid rgba(#000, 15%);
+  background-color: rgba(#000, 4%);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+
   .plate-main-section {
     flex-grow: 1;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    gap: 1px;
+
+    input[name="section1"] {
+      width: 36px;
+      height: 100%;
+    }
+
+    select {
+      width: 100%;
+    }
+
+    input[name="section2"] {
+      width: 46px;
+      height: 100%;
+    }
   }
 
   .plate-separator {
     width: 1px;
     height: 100%;
-    background-color: rgba(#000, 15%)
+    background-color: rgba(#000, 15%);
   }
 
   .plate-region-section {
@@ -58,8 +93,48 @@
     flex-direction: column;
     justify-content: space-between;
 
-    img{
+    img {
       max-width: 100%;
+    }
+  }
+}
+
+.motorbike-plate-wrapper{
+  width: 100px;
+  height: 80px;
+  border: 1px solid rgba(#000, 15%);
+  background-color: rgba(#000, 4%);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+
+  .top-plate-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 2px;
+
+    .section1-wrapper{
+      padding: 2px;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+
+    input{
+      width: 100%;
+    }
+  }
+
+  .bottom-plate-wrapper{
+    height: 100%;
+    padding: 2px;
+    padding-top: 0;
+
+    input{
+      width: 100%;
     }
   }
 }

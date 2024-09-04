@@ -1,6 +1,7 @@
 import {HTMLAttributes} from "react";
 import {CarPlate} from "./components/CarPlate.tsx";
 import "../styles/styles.scss";
+import {MotorbikePlates} from "./components/MotorbikePlates.tsx";
 
 interface LicenseNumberProp extends HTMLAttributes<HTMLDivElement> {
     value?: string;
@@ -20,8 +21,16 @@ export const IranLicensePlate = (
     }: LicenseNumberProp
 ) => {
 
-    if(vehicleType == "car"){
-        return <CarPlate value={value} onChange={onChange} className={className} style={style}/>
+    if (vehicleType == "car") {
+        return <div className="plate-wrapper">
+            <CarPlate value={value} onChange={(value) => onChange(value)} className={className} style={style}/>
+        </div>
+    }
+
+    if (vehicleType == "motorbike") {
+        return <div className="plate-wrapper">
+            <MotorbikePlates value={value} onChange={(value) => onChange(value)} className={className} style={style}/>
+        </div>
     }
 
     return <>Wrong Serial?</>;
