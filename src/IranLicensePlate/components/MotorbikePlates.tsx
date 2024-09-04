@@ -1,13 +1,15 @@
-import React, {HTMLAttributes, useEffect, useRef, useState} from "react";
+import React, {CSSProperties, HTMLAttributes, useEffect, useRef, useState} from "react";
 import flag from "../../assets/iran-flag.svg";
 import iranText from "../../assets/iran-text.svg";
 import {CarPlateDataType, MotorbikePlatesDataType} from "../../utils/types.ts";
 import {letterMapping, toPlateObject, toSerial} from "../../helper/helper.tsx";
 
 
-interface MotorbikeProps extends HTMLAttributes<HTMLDivElement> {
+interface MotorbikeProps {
     value: string;
     onChange: (value: string) => void;
+    className?: string;
+    style?: CSSProperties
 }
 
 export const MotorbikePlates: React.FC<MotorbikeProps> = ({

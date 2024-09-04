@@ -1,12 +1,14 @@
-import {HTMLAttributes} from "react";
+import {CSSProperties} from "react";
 import {CarPlate} from "./components/CarPlate.tsx";
 import "../styles/styles.scss";
 import {MotorbikePlates} from "./components/MotorbikePlates.tsx";
 
-interface LicenseNumberProp extends HTMLAttributes<HTMLDivElement> {
+interface LicenseNumberProp {
     value?: string;
     vehicleType?: 'car' | 'motorbike',
     // type?: 'regular' | 'free',
+    className?: string,
+    style?: CSSProperties
     onChange: (value: string) => void
 }
 

@@ -1,13 +1,15 @@
-import React, {HTMLAttributes, useEffect, useRef, useState} from "react";
+import React, {CSSProperties, HTMLAttributes, useEffect, useRef, useState} from "react";
 import flag from "../../assets/iran-flag.svg";
 import iranText from "../../assets/iran-text.svg";
 import {CarPlateDataType} from "../../utils/types.ts";
 import {letterMapping, toPlateObject, toSerial} from "../../helper/helper.tsx";
 
 
-interface CarProps extends HTMLAttributes<HTMLDivElement> {
+interface CarProps {
     value: string;
     onChange: (value: string) => void;
+    className?: string;
+    style?: CSSProperties
 }
 
 export const CarPlate: React.FC<CarProps> = ({
@@ -16,7 +18,7 @@ export const CarPlate: React.FC<CarProps> = ({
                                                  style = {},
                                                  onChange = (value: string) => undefined
                                              }) => {
-    const initObj = {
+    const initObj: CarPlateDataType = {
         section1: '',
         letter: '',
         section2: '',
@@ -28,7 +30,7 @@ export const CarPlate: React.FC<CarProps> = ({
 
     useEffect(() => {
         if (value) {
-            const obj: CarPlateDataType = toPlateObject(value) ?? initObj;
+            const obj: CarPlateDataType = toPlateObject(value) as CarPlateDataType ?? initObj;
             setFormData(obj);
         }
     }, [value]);

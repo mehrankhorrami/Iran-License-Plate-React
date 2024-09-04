@@ -230,7 +230,7 @@ export const toSerial = (data: CarPlateDataType | MotorbikePlatesDataType) => {
 }
 
 
-export const toPlateObject = (serial: string) => {
+export const toPlateObject = (serial: string): CarPlateDataType | MotorbikePlatesDataType | null => {
     if (serial.match(RegularPlates)) {
         const matches = RegularPlates.exec(serial);
         const info = getPlaqueInfo(matches?.groups?.Letter);
@@ -240,15 +240,15 @@ export const toPlateObject = (serial: string) => {
             section2: matches?.groups?.Section2,
             region: matches?.groups?.Region,
             cityNo: matches?.groups?.CityNo,
-        } as CarPlateDataType: null;
+        } as CarPlateDataType : null;
     }
 
-    if(serial.match(MotorbikePlates)){
+    if (serial.match(MotorbikePlates)) {
         const matches = MotorbikePlates.exec(serial);
         return matches && matches.length ? {
             section1: matches?.groups?.Section1,
             section2: matches?.groups?.Section2
-        } as MotorbikePlatesDataType: null;
+        } as MotorbikePlatesDataType : null;
     }
 }
 
